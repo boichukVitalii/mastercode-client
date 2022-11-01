@@ -9,7 +9,8 @@ module.exports = {
     extend: {
       colors: {
         'nav-blue': '#050c29',
-        'main-blue': '#081444'
+        'main-blue': '#081444',
+        'command-blue': '#030717'
       },
       height: {
         'nav': 'calc(100vh - 3.5rem)'
