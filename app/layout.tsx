@@ -12,7 +12,7 @@ const RootLayout: FC<RootLayoutProps> = ({ children }) => {
       <head>
         <title>Main</title>
       </head>
-      <body className='bg-main-blue'>
+      <body className='bg-main-blue h-screen'>
         <Navbar />
         {children}
       </body>
