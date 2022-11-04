@@ -7,14 +7,12 @@ import { githubDark } from '@uiw/codemirror-theme-github';
 
 const CodeEditor: FC = () => {
 	return (
-		<div className='h-full overflow-auto'>
-			<CodeMirror
-				value="console.log('hello world!');"
-				height="calc(100vh - 2.75rem)"
-				extensions={[javascript()]}
-				theme={githubDark}
-			/>
-		</div>
+		<CodeMirror
+			value="console.log('hello world!');"
+			height="calc(100vh - 2.75rem - 3.5rem - 17.1875rem)"
+			extensions={[javascript()]}
+			theme={githubDark}
+		/>
 	);
 };
 
