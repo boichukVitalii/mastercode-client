@@ -10,12 +10,15 @@ module.exports = {
       colors: {
         'nav-blue': '#050c29',
         'main-blue': '#081444',
-        'command-blue': '#030717'
+        'command-blue': '#030717',
+        'github-dark': '#0d1117'
       },
       height: {
         'nav': 'calc(100vh - 3.5rem)'
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 };
