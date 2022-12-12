@@ -7,7 +7,9 @@ interface AboutProps {
 
 const AboutPage: FC<AboutProps> = ({ params }) => {
 	return (
-		<></>
+		<div className='flex flex-col container mx-auto text-white'>
+			<p className='text-2xl pt-4'>This app was created by Vitalii Boichuk.</p>
+		</div>
 	);
 };
 

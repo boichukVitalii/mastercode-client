@@ -1,16 +1,14 @@
-import { FC } from 'react';
+import { FC, use } from 'react';
 import Problems from './Problems';
-import { Difficulty, TProblems } from './problems.d';
+import { Problem } from './problems.d';
 
-const problems: TProblems = [
-	{ id: 1, title: 'Two sum', difficulty: Difficulty.Easy },
-	{ id: 2, title: 'Add two numbers', difficulty: Difficulty.Medium },
-	{ id: 3, title: 'Median of Two Sorted Arrays', difficulty: Difficulty.Hard },
-	{ id: 4, title: 'Reverse Integer', difficulty: Difficulty.Hard },
-	{ id: 5, title: 'Container With Most Water', difficulty: Difficulty.Easy },
-];
+const getProblems = async () => {
+	const res = await fetch(`http://localhost:5000/api/problems`, { cache: 'no-store' });
+	return res.json();
+};
 
 const ProblemsPage: FC = () => {
+	const problems: Problem[] = use(getProblems());
 	return (
 		<div className='container mx-auto mt-3 flex-col'>
 			<div

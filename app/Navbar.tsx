@@ -22,7 +22,7 @@ const Navbar: FC = () => {
 						}
 					</ul>
 				</div>
-				<div>Profile</div>
+				<div className='hidden'>Profile</div>
 			</nav>
 		</header>
 	);

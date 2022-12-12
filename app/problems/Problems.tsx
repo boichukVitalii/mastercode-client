@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import { FC } from 'react';
-import { Difficulty, TProblems } from './problems.d';
+import { Difficulty, Problem } from './problems.d';
 
 interface ProblemProps {
-	problems: TProblems;
+	problems: Problem[];
 }
 
 const Problems: FC<ProblemProps> = ({ problems }) => {
@@ -20,7 +20,7 @@ const Problems: FC<ProblemProps> = ({ problems }) => {
 						<div key={problem.title}
 							className={'flex justify-between items-center h-12 divide-none ' + bg}>
 							<div className='ml-5 hover:text-white'>
-								<Link href={`/problems/${problem.id}`}>{`${problem.id}. ${problem.title}`}</Link>
+								<Link href={`/problems/${problem.id}`}>{`${i + 1}. ${problem.title}`}</Link>
 							</div>
 							<div className={'mr-5 ' + difficulty}>
 								{problem.difficulty}
